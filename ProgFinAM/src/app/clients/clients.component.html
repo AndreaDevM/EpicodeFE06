@@ -1,0 +1,88 @@
+<div class=" container d-flex justify-content-center col-2 my-5">
+    <button type="button" class="btn btn-dark form-control" (click)="addClient()">Add New Client</button>
+</div>
+<table class="table my-5">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">e-mail</th>
+            <th scope="col">P. Iva</th>
+            <th scope="col">Tel.</th>
+            <th>Modifica/Vedi Dettagli</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of clients; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.nomeContatto}}</td>
+            <td>{{item.cognomeContatto}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.partitaIva}}</td>
+            <td>{{item.telefono}}</td>
+            <td>
+                <div class="container d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger btn-sm mx-1" (click)="deleteClient(item.id)"><i
+                            class="bi bi-trash"></i></button>
+                    <button type="button" class="btn btn-warning btn-sm mx-1" (click)="editClient(content, item)"><i
+                            class="bi bi-pencil-square"></i></button>
+                    <button type="button" class="btn btn-primary btn-sm mx-1" (click)="clientDetails(item.id)"><i
+                            class="bi bi-person-circle"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Modifica Utente</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" my-3">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="clientEdit.nomeContatto" class="form-control" placeholder="Nome...">
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="clientEdit.cognomeContatto" class="form-control"
+                    placeholder="Cognome...">
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="clientEdit.email" class="form-control" placeholder="Email...">
+            </div>
+            <div class="form-group">
+                <input type="number" [(ngModel)]="clientEdit.partitaIva" class="form-control"
+                    placeholder="Partita iva...">
+            </div>
+
+            <div class="form-group">
+                <input type="text" [(ngModel)]="clientEdit.pec" class="form-control" placeholder="Pec...">
+            </div>
+            <div class="form-group">
+                <input type="number" [(ngModel)]="clientEdit.telefonoContatto" class="form-control"
+                    placeholder="Telefono contatto...">
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="clientEdit.telefono" class="form-control" placeholder="Telefono...">
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="clientEdit.emailContatto" class="form-control"
+                    placeholder="Email Contatto...">
+            </div>
+            <div class="form-group">
+                <input type="number" [(ngModel)]="clientEdit.fatturatoAnnuale" class="form-control"
+                    placeholder="Fatturato...">
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="clientEdit.ragioneSociale" class="form-control"
+                    placeholder="Ragione sociale...">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="saveChanges()">Save Changes</button>
+    </div>
+</ng-template>
