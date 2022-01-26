@@ -12,7 +12,6 @@ import { HttpinterceptorInterceptor } from './httpinterceptor.interceptor';
 import { NewClientComponent } from './new-client/new-client.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { HomeComponent } from './home/home.component';
-import { ComuniComponent } from './comuni/comuni.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { ComuniComponent } from './comuni/comuni.component';
     ClientsComponent,
     NewClientComponent,
     ClientDetailsComponent,
-    HomeComponent,
-    ComuniComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

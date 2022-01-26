@@ -34,6 +34,7 @@
         </tr>
     </tbody>
 </table>
+
 <ng-template #content let-modal>
     <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Modifica Utente</h4>
@@ -71,10 +72,6 @@
             <div class="form-group">
                 <input type="text" [(ngModel)]="clientEdit.emailContatto" class="form-control"
                     placeholder="Email Contatto...">
-            </div>
-            <div class="form-group">
-                <input type="number" [(ngModel)]="clientEdit.fatturatoAnnuale" class="form-control"
-                    placeholder="Fatturato...">
             </div>
             <div class="form-group">
                 <input type="text" [(ngModel)]="clientEdit.ragioneSociale" class="form-control"

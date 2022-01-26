@@ -2,22 +2,23 @@ import { IndirizzoSedeLegale } from "./indirizzo-sede-legale";
 import { IndirizzoSedeOperativa } from "./indirizzo-sede-operativa";
 
 export class Client {
+
     id!: number;
+    ragioneSociale!: string;
+    partitaIva!: string;
+    tipoCliente!: string;
+    email!: string;
+    pec!: string;
+    telefono!: number;
+    nomeContatto!: string;
     cognomeContatto!: string;
+    telefonoContatto!: number;
+    emailContatto!: string;
+    indirizzoSedeOperativa!: IndirizzoSedeOperativa;
+    indirizzoSedeLegale!: IndirizzoSedeLegale;
     dataInserimento!: string;
     dataUltimoContatto!: string;
-    email!: string;
-    emailContatto!: string;
-    fatturatoAnnuale!: number;
-    indirizzoSedeLegale!: IndirizzoSedeLegale;
-    indirizzoSedeOperativa!: IndirizzoSedeOperativa;
-    nomeContatto!: string;
-    partitaIva!: string;
-    pec!: string;
-    ragioneSociale!: string;
-    telefono!: number;
-    telefonoContatto!: number;
-    tipoCliente!: string;
+    fatturatoAnnuale!: string;
 
     constructor() {
         this.indirizzoSedeLegale = new IndirizzoSedeLegale;
