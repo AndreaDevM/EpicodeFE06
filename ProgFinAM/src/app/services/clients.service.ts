@@ -36,8 +36,8 @@ export class ClientsService {
       return this.http.get<string[]>(environment.urlEpicode+'api/clienti/tipicliente')
     }
 
-    saveClient(client: Client) {
-      return this.http.put<Client>(environment.urlEpicode+'api/clienti/'+ client.id, client)
+    saveClient(item: Client) {
+      return this.http.put<Client>(environment.urlEpicode+'api/clienti/'+ item.id, item)
     }
 
     deleteClient(id: number | undefined) {

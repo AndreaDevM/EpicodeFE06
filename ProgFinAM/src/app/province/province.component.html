@@ -1,0 +1,65 @@
+<div class="form-row my-3">
+
+    <div class="col-4">
+        <input type="text" [(ngModel)]="newProvincia.nome" name="nome" class="form-control"
+            placeholder="Nome Provincia">
+    </div>
+
+    <div class="col-4">
+        <input type="text" [(ngModel)]="newProvincia.sigla" name="sigla" class="form-control"
+            placeholder="Sigla Provincia">
+    </div>
+
+    <div class="col-2">
+        <button type="button" class="btn btn-dark form-control" (click)="addProvincia()">Add New Client</button>
+    </div>
+
+</div>
+
+<table class="table my-5">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sigla</th>
+            <th>Modifica/Vedi Dettagli</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of province; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.nome}}</td>
+            <td>{{item.sigla}}</td>
+            <td>
+                <div class="container d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger btn-sm mx-1" (click)="deleteProvincia(item)"><i
+                            class="bi bi-trash"></i></button>
+                    <button type="button" class="btn btn-warning btn-sm mx-1" (click)="editProvincia(content, item)"><i
+                            class="bi bi-pencil-square"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Modifica Utente</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" my-3">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="copyProvincia.nome" class="form-control" placeholder="Nome Provincia">
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="copyProvincia.sigla" class="form-control" placeholder="Sigla Provincia">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="saveChanges()">Save Changes</button>
+    </div>
+</ng-template>

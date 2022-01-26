@@ -12,6 +12,9 @@ import { HttpinterceptorInterceptor } from './httpinterceptor.interceptor';
 import { NewClientComponent } from './new-client/new-client.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { HomeComponent } from './home/home.component';
+import { ProvinceComponent } from './province/province.component';
+import { MunicipalityComponent } from './municipality/municipality.component';
+import { InvoicesComponent } from './invoices/invoices.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { HomeComponent } from './home/home.component';
     ClientsComponent,
     NewClientComponent,
     ClientDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    ProvinceComponent,
+    MunicipalityComponent,
+    InvoicesComponent
   ],
   imports: [
     BrowserModule,

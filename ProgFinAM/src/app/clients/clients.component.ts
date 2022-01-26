@@ -44,7 +44,7 @@ export class ClientsComponent implements OnInit {
   }
 
   deleteClient(item: Client) {
-    this.clientService.deleteClient(item.id).subscribe(data => {console.log(data)})
+    this.clientService.deleteClient(item.id).subscribe(data => {console.log('Elemento eliminato: ' + data)})
   }
 
 }
