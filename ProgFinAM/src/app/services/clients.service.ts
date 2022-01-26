@@ -40,7 +40,7 @@ export class ClientsService {
       return this.http.put<Client>(environment.urlEpicode+'api/clienti/'+ client.id, client)
     }
 
-    deleteClient(id: number) {
+    deleteClient(id: number | undefined) {
       return this.http.delete(environment.urlEpicode+'api/clienti/' + id);
     }
 }

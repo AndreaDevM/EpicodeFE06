@@ -86,7 +86,7 @@
     <div class="container col-md-4 my-1">
         <p></p>
         <label for="comuneNome">Comune:</label>
-        <select [(ngModel)]="client.indirizzoSedeLegale.comune.nome">
+        <select [(ngModel)]="client.indirizzoSedeLegale.comune">
             <option [ngValue]="item" *ngFor="let item of comuneArr">
                 {{item.nome}}
             </option>
@@ -130,7 +130,7 @@
     <div class="container col-md-4 my-1">
         <p></p>
         <label for="comuneNome">Comune:</label>
-        <select [(ngModel)]="client.indirizzoSedeOperativa.comune.nome">
+        <select [(ngModel)]="client.indirizzoSedeOperativa.comune">
             <option [ngValue]="item" *ngFor="let item of comuneArr">
                 {{item.nome}}
             </option>

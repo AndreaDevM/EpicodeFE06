@@ -28,8 +28,8 @@ export class ClientsComponent implements OnInit {
     this.router.navigate(['/client/new'])
   }
 
-  clientDetails(id: number) {
-    this.router.navigate(['client', id ,'details'])
+  clientDetails(item: Client) {
+    this.router.navigate(['client', item.id ,'details'])
   }
 
   editClient(content: any, item: Client) {
@@ -43,8 +43,8 @@ export class ClientsComponent implements OnInit {
     console.log(this.clientEdit)
   }
 
-  deleteClient(id: number) {
-    this.clientService.deleteClient(id).subscribe(data => {console.log(data)})
+  deleteClient(item: Client) {
+    this.clientService.deleteClient(item.id).subscribe(data => {console.log(data)})
   }
 
 }

@@ -1,7 +1,7 @@
 import { Comune } from "./comune";
 
 export class IndirizzoSedeOperativa {
-    id!: number;
+    id?: number;
         cap!: number;
         civico!: number;
         localita!: string;

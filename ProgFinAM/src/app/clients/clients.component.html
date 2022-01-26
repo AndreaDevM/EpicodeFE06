@@ -23,11 +23,11 @@
             <td>{{item.telefono}}</td>
             <td>
                 <div class="container d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger btn-sm mx-1" (click)="deleteClient(item.id)"><i
+                    <button type="button" class="btn btn-danger btn-sm mx-1" (click)="deleteClient(item)"><i
                             class="bi bi-trash"></i></button>
                     <button type="button" class="btn btn-warning btn-sm mx-1" (click)="editClient(content, item)"><i
                             class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-primary btn-sm mx-1" (click)="clientDetails(item.id)"><i
+                    <button type="button" class="btn btn-primary btn-sm mx-1" (click)="clientDetails(item)"><i
                             class="bi bi-person-circle"></i></button>
                 </div>
             </td>

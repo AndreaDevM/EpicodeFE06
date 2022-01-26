@@ -3,7 +3,7 @@ import { IndirizzoSedeOperativa } from "./indirizzo-sede-operativa";
 
 export class Client {
 
-    id!: number;
+    id?: number;
     ragioneSociale!: string;
     partitaIva!: string;
     tipoCliente!: string;
@@ -18,7 +18,7 @@ export class Client {
     indirizzoSedeLegale!: IndirizzoSedeLegale;
     dataInserimento!: string;
     dataUltimoContatto!: string;
-    fatturatoAnnuale!: string;
+    fatturatoAnnuale?: string;
 
     constructor() {
         this.indirizzoSedeLegale = new IndirizzoSedeLegale;
