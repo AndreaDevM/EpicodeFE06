@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Fatture } from '../classes/fatture';
+import { Invoices } from '../interfaces/invoices';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +20,19 @@ export class FattureService {
                         }
 
   getAllFatture() {
-    return this.http.get<any>(environment.urlEpicode+'api/fatture?page=0&size=20&sort=id,ASC')
+    return this.http.get<Invoices>(environment.urlEpicode+'api/fatture?page=0&size=20&sort=id,ASC')
+  }
+
+  getFattureById(id: number) {
+    return this.http.get<Fatture>(environment.urlEpicode+'api/fatture/'+id)
+  }
+
+  deleteFattura(id: number | undefined) {
+    return this.http.delete(environment.urlEpicode+'api/fatture/' + id);
+  }
+
+  addClient(item: Fatture) {
+    return this.http.post<Fatture>(environment.urlEpicode+'api/fatture', item)
   }
 
 }

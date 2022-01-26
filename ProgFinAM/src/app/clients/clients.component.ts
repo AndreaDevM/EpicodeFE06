@@ -13,7 +13,6 @@ import { ClientsService } from '../services/clients.service';
 export class ClientsComponent implements OnInit {
 
   clients: Client[] = [];
-
   clientEdit!: Client;
 
   constructor(private clientService: ClientsService,
