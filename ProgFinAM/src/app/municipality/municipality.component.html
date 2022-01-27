@@ -1,12 +1,12 @@
 <form class="my-5">
-    <div class="form-row">
+    <div class="container d-flex jus justify-content-center form-row">
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label for="nomeComune">Nome del Comune: </label>
             <input type="text" [(ngModel)]="comune.nome" name="nomeComune" class="form-control">
         </div>
 
-        <div class="form-group col-md-2">
+        <div class="form-group col-md-3">
             <label for="tipo">Provincia</label>
             <select class="p-2" name="tipo" [(ngModel)]="comune.provincia" [ngModelOptions]="{standalone: true}">
                 <option [ngValue]="item" *ngFor="let item of provincia">
@@ -17,9 +17,10 @@
 
     </div>
 
-    <div class="form-group col-md-3 my-4">
-        <button type="button" class="btn btn-primary" (click)="addComune()">Add Municipality</button>
+    <div class="container container d-flex jus justify-content-center col-md-3">
+        <button type="button" class="btn button-bg" (click)="addComune()">Add Municipality</button>
     </div>
+
 </form>
 
 <table class="table my-5">

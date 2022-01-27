@@ -1,27 +1,30 @@
-<div class="card text-white bg-info mb-3">
+<div class="card dark my-5">
     <div class="card-header">
         <h1>
             {{client.cognomeContatto}} {{client.nomeContatto}}
         </h1>
     </div>
     <div class="card-body">
-        <h5 class="card-title text-warning"><span class="text-white">Data di Inserimento:</span>
+        <h5 class="card-title text-color2"><span class="text-color1">Data di Inserimento:</span>
             {{client.dataInserimento}}</h5>
-        <h5 class="card-title text-warning"><span class="text-white">Ultimo Contatto:</span>
+        <h5 class="card-title text-color2"><span class="text-color1">Ultimo Contatto:</span>
             {{client.dataUltimoContatto}}</h5>
-        <h5 class="card-title text-warning"><span class="text-white">Email:</span> {{client.email}}</h5>
-        <h5 class="card-title text-warning"><span class="text-white">Email Contatto:</span> {{client.emailContatto}}
+        <h5 class="card-title text-color2"><span class="text-color1">Email:</span> {{client.email}}</h5>
+        <h5 class="card-title text-color2"><span class="text-color1">Email Contatto:</span> {{client.emailContatto}}
         </h5>
-        <h5 class="card-title text-warning"><span class="text-white">Fatturato Annuale:</span>
+        <h5 class="card-title text-color2"><span class="text-color1">Fatturato Annuale:</span>
             {{client.fatturatoAnnuale}}</h5>
-        <h5 class="card-title text-warning">
+        <h5 class="card-title text-color2">
             <ul>
                 <li *ngFor="let item of fatturaCliente;">
-                    <span class="text-dark">Numero fattura:</span> {{item.numero}} (Importo: {{item.importo}} €)
+                    <span class="text-dark">Numero fattura:</span>
+                    {{item.numero}} (Importo: {{item.importo}} €)
+                    <button type="button" class="btn button-bg" (click)="invoiceDetails(item)"><i
+                            class="bi bi-eye-fill"></i></button>
                 </li>
             </ul>
         </h5>
-        <h5 class="card-title text-warning"><span class="text-white">Indirizzo Sede Legale:</span>
+        <h5 class="card-title text-color2"><span class="text-color1">Indirizzo Sede Legale:</span>
             <h6 class="mt-2"><span class="text-dark">Via:</span> {{client.indirizzoSedeLegale.via}}</h6>
             <h6><span class="text-dark">N°:</span> {{client.indirizzoSedeLegale.civico}}</h6>
             <h6><span class="text-dark">Località(cap):</span> {{client.indirizzoSedeLegale.localita}}
@@ -29,7 +32,7 @@
             <h6><span class="text-dark">Comune:</span> {{client.indirizzoSedeLegale.comune.nome}}
                 ({{client.indirizzoSedeLegale.comune.provincia.sigla}})</h6>
         </h5>
-        <h5 class="card-title text-warning"><span class="text-white">Indirizzo Sede Operativa:</span>
+        <h5 class="card-title text-color2"><span class="text-color1">Indirizzo Sede Operativa:</span>
             <h6 class="mt-2"><span class="text-dark">Via:</span> {{client.indirizzoSedeOperativa.via}}</h6>
             <h6><span class="text-dark">N°:</span> {{client.indirizzoSedeOperativa.civico}}</h6>
             <h6><span class="text-dark">Località(cap):</span> {{client.indirizzoSedeOperativa.localita}}
@@ -37,19 +40,14 @@
             <h6><span class="text-dark">Comune:</span> {{client.indirizzoSedeOperativa.comune.nome}}
                 ({{client.indirizzoSedeOperativa.comune.provincia.sigla}})</h6>
         </h5>
-        <h5 class="card-title text-warning"><span class="text-white">P.IVA:</span> {{client.partitaIva}}</h5>
-        <h5 class="card-title text-warning"><span class="text-white">Pec:</span> {{client.pec}}</h5>
-        <h5 class="card-title text-warning"><span class="text-white">Ragione Sociale:</span> {{client.ragioneSociale}}
+        <h5 class="card-title text-color2"><span class="text-color1">P.IVA:</span> {{client.partitaIva}}</h5>
+        <h5 class="card-title text-color2"><span class="text-color1">Pec:</span> {{client.pec}}</h5>
+        <h5 class="card-title text-color2"><span class="text-color1">Ragione Sociale:</span> {{client.ragioneSociale}}
         </h5>
-        <h5 class="card-title text-warning"><span class="text-white">Telefono:</span> {{client.telefono}}</h5>
-        <h5 class="card-title text-warning"><span class="text-white">Telefono Contatto:</span>
+        <h5 class="card-title text-color2"><span class="text-color1">Telefono:</span> {{client.telefono}}</h5>
+        <h5 class="card-title text-color2"><span class="text-color1">Telefono Contatto:</span>
             {{client.telefonoContatto}}</h5>
-        <h5 class="card-title text-warning"><span class="text-white">Tipo Cliente:</span> {{client.tipoCliente}}</h5>
-    </div>
-
-    <div class="container d-flex justify-content-center col-2 my-5">
-        <button type="button" class="btn btn-light text-dark btn-lg" (click)="clientInvoices(client)">See Client's
-            Invoices</button>
+        <h5 class="card-title text-color2"><span class="text-color1">Tipo Cliente:</span> {{client.tipoCliente}}</h5>
     </div>
 
 </div>

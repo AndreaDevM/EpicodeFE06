@@ -1,0 +1,20 @@
+.card {
+  background: rgb(0, 181, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 181, 255, 1) 25%,
+    rgba(0, 255, 248, 1) 75%
+  );
+}
+
+.text-color1 {
+  color: rgb(0, 31, 255, 1);
+}
+
+.text-color2 {
+  color: rgba(171, 0, 255, 1);
+}
+
+.button-bg {
+  background: rgba(0, 255, 55, 1);
+}

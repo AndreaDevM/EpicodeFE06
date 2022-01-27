@@ -1,21 +1,21 @@
-<div class="form-row d-flex my-5">
+<div class="form-color-bg form-row d-flex py-5">
 
-    <div class="col-md-3 my-1">
+    <div class="col-md-4 my-1">
         <label for="numero">Numero:</label>
         <input type="number" [(ngModel)]="fattura.numero" class="form-control" placeholder="Numero">
     </div>
 
-    <div class="col-md-3 my-1">
+    <div class="col-md-4 my-1">
         <label for="Pec">Anno:</label>
         <input type="number" [(ngModel)]="fattura.anno" class="form-control" placeholder="Anno">
     </div>
 
-    <div class="col-md-3 my-1">
+    <div class="col-md-4 my-1">
         <label for="Pec">Importo:</label>
         <input type="number" [(ngModel)]="fattura.importo" class="form-control" placeholder="Importo">
     </div>
 
-    <div class="col-md-3 my-1">
+    <div class="col-md-6 my-5">
         <label for="tipo">Cliente: </label>
         <select class="p-2" name="tipo" [(ngModel)]="fattura.cliente" [ngModelOptions]="{standalone: true}">
             <option [ngValue]="item" *ngFor="let item of clients">
@@ -24,8 +24,8 @@
         </select>
     </div>
 
-    <div class="col-md-3 my-1">
-        <label for="tipo">Cliente: </label>
+    <div class="col-md-6 my-5">
+        <label for="tipo">Stato Fattura: </label>
         <select class="p-2" name="tipo" [(ngModel)]="fattura.stato" [ngModelOptions]="{standalone: true}">
             <option [ngValue]="item" *ngFor="let item of statoFattura">
                 {{item.nome}}
@@ -33,8 +33,8 @@
         </select>
     </div>
 
-</div>
+    <div class="container d-flex justify-content-center col-3 px-5">
+        <button type="button" class="btn button-bg form-control" (click)="addFattura()">Save New Invoice</button>
+    </div>
 
-<div class="container d-flex justify-content-center col-3">
-    <button type="button" class="btn btn-dark form-control" (click)="addFattura()">Add Client</button>
 </div>

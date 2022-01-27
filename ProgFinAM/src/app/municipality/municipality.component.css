@@ -1,0 +1,19 @@
+table {
+  background: rgb(249, 255, 93);
+  background: linear-gradient(
+    90deg,
+    rgba(249, 255, 93, 1) 30%,
+    rgba(93, 255, 100, 1) 75%
+  );
+
+  border-radius: 10px;
+}
+
+.button-bg {
+  background: rgb(255, 136, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 136, 0, 1) 25%,
+    rgba(255, 252, 0, 1) 75%
+  );
+}

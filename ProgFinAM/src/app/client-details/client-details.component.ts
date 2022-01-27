@@ -29,8 +29,8 @@ export class ClientDetailsComponent implements OnInit {
       });
   }
 
-    clientInvoices(client: Client) {
-      this.router.navigate(['client', client.id,'invoices']);
-    }
+  invoiceDetails(item: Fatture) {
+    this.router.navigate(['invoices', item.id, 'details']);
+  }
   
 };

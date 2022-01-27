@@ -1,0 +1,17 @@
+.card {
+  background: rgb(39, 247, 255);
+  background: linear-gradient(
+    270deg,
+    rgba(39, 247, 255, 1) 0%,
+    rgba(214, 110, 255, 1) 75%
+  );
+  border-radius: 10px;
+}
+
+.text-color1 {
+  color: rgba(39, 247, 255, 1);
+}
+
+.text-color2 {
+  color: #1d29ff;
+}

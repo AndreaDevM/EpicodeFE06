@@ -1,62 +1,62 @@
-<div class="form-row d-flex my-5">
+<div class="form-row d-flex mb-5 bg-warning p-5 table-gradient">
     <div class="col-md-3 my-1">
-        <label for="Nome">Nome:</label>
+        <label for="Nome"><b>Nome:</b></label>
         <input type="text" [(ngModel)]="client.nomeContatto" name="todo" class="form-control" placeholder="Nome">
     </div>
 
     <div class="col-md-3 my-1">
-        <label for="Cognome">Cognome:</label>
+        <label for="Cognome"><b>Cognome:</b></label>
         <input type="text" [(ngModel)]="client.cognomeContatto" class="form-control" placeholder="Cognome">
     </div>
 
     <div class="col-md-3 my-1">
-        <label for="Email">Email:</label>
+        <label for="Email"><b>Email:</b></label>
         <input type="email" [(ngModel)]="client.email" class="form-control" placeholder="Email">
     </div>
 
     <div class="col-md-3 my-1">
-        <label for="email contatto">Email Contatto:</label>
-        <input type="email" [(ngModel)]="client.emailContatto" class="form-control" placeholder="Email Contatto">
-    </div>
-
-    <div class="col-md-3 my-1">
-        <label for="Telefono">Telefono:</label>
+        <label for="Telefono"><b>Telefono:</b></label>
         <input type="number" [(ngModel)]="client.telefono" class="form-control" placeholder="Telefono">
     </div>
 
-    <div class="col-md-3 my-1">
-        <label for="Telefono Contatto">Telefono Contatto:</label>
+    <div class="col-md-4 my-1">
+        <label for="email contatto"><b>>Email Contatto:</b></label>
+        <input type="email" [(ngModel)]="client.emailContatto" class="form-control" placeholder="Email Contatto">
+    </div>
+
+    <div class="col-md-4 my-1">
+        <label for="Telefono Contatto"><b>Telefono Contatto:</b></label>
         <input type="number" [(ngModel)]="client.telefonoContatto" class="form-control" placeholder="Telefono Contatto">
     </div>
 
-    <div class="col-md-3 my-1">
-        <label for="P. IVA">P. IVA:</label>
+    <div class="col-md-4 my-1">
+        <label for="P. IVA"><b>P. IVA:</b></label>
         <input type="text" [(ngModel)]="client.partitaIva" class="form-control" placeholder="P. IVA">
     </div>
 
     <div class="col-md-3 my-1">
-        <label for="fatturatoAnnuale">Fatturato Annuale:</label>
+        <label for="fatturatoAnnuale"><b>Fatturato Annuale:</b></label>
         <input type="number" [(ngModel)]="client.fatturatoAnnuale" class="form-control" placeholder="Fatturato Annuale">
     </div>
 
     <div class="col-md-3 my-1">
+        <label for="Pec"><b>PEC:</b></label>
+        <input type="email" [(ngModel)]="client.pec" class="form-control" placeholder="Pec">
+    </div>
+
+    <div class="col-md-3 my-1">
+        <label for="Ragione Sociale"><b>Ragione Sociale:</b></label>
+        <input type="text" [(ngModel)]="client.ragioneSociale" class="form-control" placeholder="Ragione Sociale">
+    </div>
+
+    <div class="col-md-3">
         <p></p>
-        <label for="FormGroupExampleInput2">Tipo Cliente</label>
+        <label for="FormGroupExampleInput2"><b>Tipo Cliente</b></label>
         <select [(ngModel)]="client.tipoCliente">
             <option [ngValue]="item" *ngFor="let item of tipoCliente">
                 {{item}}
             </option>
         </select>
-    </div>
-
-    <div class="col-md-3 my-1">
-        <label for="Pec">PEC:</label>
-        <input type="email" [(ngModel)]="client.pec" class="form-control" placeholder="Pec">
-    </div>
-
-    <div class="col-md-3 my-1">
-        <label for="Ragione Sociale">Ragione Sociale:</label>
-        <input type="text" [(ngModel)]="client.ragioneSociale" class="form-control" placeholder="Ragione Sociale">
     </div>
 
     <div class="col-12 my-3">
@@ -66,29 +66,29 @@
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="Via">Via</label>
+        <label for="Via"><b>Via</b></label>
         <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" class="form-control" placeholder="Via">
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="civico">Civico:</label>
+        <label for="civico"><b>Civico:</b></label>
         <input type="number" [(ngModel)]="client.indirizzoSedeLegale.civico" class="form-control" placeholder="Civico">
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="cap">CAP:</label>
+        <label for="cap"><b>CAP:</b></label>
         <input type="number" [(ngModel)]="client.indirizzoSedeLegale.cap" class="form-control" placeholder="CAP">
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="località">Località:</label>
+        <label for="località"><b>Località:</b></label>
         <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" class="form-control"
             placeholder="Località">
     </div>
 
     <div class="container col-md-4 my-1">
         <p></p>
-        <label for="comuneNome">Comune:</label>
+        <label for="comuneNome"><b>Comune:</b></label>
         <select [(ngModel)]="client.indirizzoSedeLegale.comune">
             <option [ngValue]="item" *ngFor="let item of comuneArr">
                 {{item.nome}}
@@ -97,7 +97,7 @@
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="provinciaNome">Provincia:</label>
+        <label for="provinciaNome"><b>Provincia:</b></label>
         <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.provincia.nome" class="form-control"
             placeholder="Provincia">
     </div>
@@ -109,30 +109,30 @@
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="Via">Via</label>
+        <label for="Via"><b>Via</b></label>
         <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.via" class="form-control" placeholder="Via">
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="civico">Civico:</label>
+        <label for="civico"><b>Civico:</b></label>
         <input type="number" [(ngModel)]="client.indirizzoSedeOperativa.civico" class="form-control"
             placeholder="Civico">
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="cap">CAP:</label>
+        <label for="cap"><b>CAP:</b></label>
         <input type="number" [(ngModel)]="client.indirizzoSedeOperativa.cap" class="form-control" placeholder="CAP">
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="località">Località:</label>
+        <label for="località"><b>Località:</b></label>
         <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.localita" class="form-control"
             placeholder="Località">
     </div>
 
     <div class="container col-md-4 my-1">
         <p></p>
-        <label for="comuneNome">Comune:</label>
+        <label for="comuneNome"><b>Comune:</b></label>
         <select [(ngModel)]="client.indirizzoSedeOperativa.comune">
             <option [ngValue]="item" *ngFor="let item of comuneArr">
                 {{item.nome}}
@@ -141,14 +141,14 @@
     </div>
 
     <div class="container col-md-4 my-1">
-        <label for="provinciaNome">Provincia:</label>
+        <label for="provinciaNome"><b>Provincia:</b></label>
         <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.nome" class="form-control"
             placeholder="Provincia">
     </div>
 
+    <div class="container d-flex justify-content-center col-3 bg mt-5">
+        <button type="button" class="btn button-color form-control" (click)="saveClient()"><b class="text-danger">Add
+                Client</b></button>
+    </div>
 
-
-</div>
-<div class="container d-flex justify-content-center col-3">
-    <button type="button" class="btn btn-dark form-control" (click)="saveClient()">Add Client</button>
 </div>
