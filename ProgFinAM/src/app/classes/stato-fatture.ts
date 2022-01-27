@@ -1,9 +1,7 @@
 export class StatoFatture {
     
     id?: number;
-    stato!: string;
+    nome!: string;
 
-    constructor(){
-        this.stato = 'PAGATA';
-    }
+    constructor(){}
 }

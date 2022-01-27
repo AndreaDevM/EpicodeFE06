@@ -1,8 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Client } from '../classes/client';
 import { Fatture } from '../classes/fatture';
 import { Invoices } from '../interfaces/invoices';
+import { IstatoFatture } from '../interfaces/istato-fatture';
 
 @Injectable({
   providedIn: 'root'
@@ -31,8 +33,20 @@ export class FattureService {
     return this.http.delete(environment.urlEpicode+'api/fatture/' + id);
   }
 
-  addClient(item: Fatture) {
+  addFattura(item: Fatture) {
     return this.http.post<Fatture>(environment.urlEpicode+'api/fatture', item)
+  }
+
+  getStatoFattura() {
+    return this.http.get<IstatoFatture>(environment.urlEpicode+'api/statifattura?page=0&size=20&sort=id,ASC')
+  }
+
+  getFattureByClient(item: Client) {
+    return this.http.get<Invoices>(environment.urlEpicode+'api/fatture/cliente/' + item.id + '?page=0&size=20&sort=id,ASC')
+  }
+
+  saveFattura(item: Fatture) {
+    return this.http.put<Fatture>(environment.urlEpicode+'/api/fatture/'+ item.id, item)
   }
 
 }

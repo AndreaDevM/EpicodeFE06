@@ -14,6 +14,13 @@
         </h5>
         <h5 class="card-title text-warning"><span class="text-white">Fatturato Annuale:</span>
             {{client.fatturatoAnnuale}}</h5>
+        <h5 class="card-title text-warning">
+            <ul>
+                <li *ngFor="let item of fatturaCliente;">
+                    <span class="text-dark">Numero fattura:</span> {{item.numero}} (Importo: {{item.importo}} €)
+                </li>
+            </ul>
+        </h5>
         <h5 class="card-title text-warning"><span class="text-white">Indirizzo Sede Legale:</span>
             <h6 class="mt-2"><span class="text-dark">Via:</span> {{client.indirizzoSedeLegale.via}}</h6>
             <h6><span class="text-dark">N°:</span> {{client.indirizzoSedeLegale.civico}}</h6>
@@ -39,23 +46,10 @@
             {{client.telefonoContatto}}</h5>
         <h5 class="card-title text-warning"><span class="text-white">Tipo Cliente:</span> {{client.tipoCliente}}</h5>
     </div>
-</div>
 
-<!--
-    indirizzoSedeOperativa!: {
-        id: number;
-        cap: string;
-        civico: string;
-        localita: string;
-        via: string;
-        comune: {
-            id: number;
-            nome: string;
-            provincia: {
-                id: number;
-                nome: string;
-                sigla: string;
-            }
-        }
-    };
--->
+    <div class="container d-flex justify-content-center col-2 my-5">
+        <button type="button" class="btn btn-light text-dark btn-lg" (click)="clientInvoices(client)">See Client's
+            Invoices</button>
+    </div>
+
+</div>

@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { ProvinceComponent } from './province/province.component';
 import { MunicipalityComponent } from './municipality/municipality.component';
 import { InvoicesComponent } from './invoices/invoices.component';
+import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
+import { InvoicesDetailsComponent } from './invoices-details/invoices-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { InvoicesComponent } from './invoices/invoices.component';
     HomeComponent,
     ProvinceComponent,
     MunicipalityComponent,
-    InvoicesComponent
+    InvoicesComponent,
+    NewInvoiceComponent,
+    InvoicesDetailsComponent
   ],
   imports: [
     BrowserModule,

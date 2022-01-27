@@ -20,14 +20,14 @@ export class ProvinceService {
                         }
 
   getAllProvince() {
-    return this.http.get<Province>(environment.urlEpicode+'api/province?page=0&size=20&sort=id,ASC')
+    return this.http.get<Province>(environment.urlEpicode+'api/province?page=0&size=20&sort=id,DESC')
   }
 
   addProvincia(item: Provincia) {
     return this.http.post<Provincia>(environment.urlEpicode+'api/province', item)
   }
 
-  saveClient(item: Provincia) {
+  saveProvincia(item: Provincia) {
     return this.http.put<Provincia>(environment.urlEpicode+'api/province/'+ item.id, item)
   }
 

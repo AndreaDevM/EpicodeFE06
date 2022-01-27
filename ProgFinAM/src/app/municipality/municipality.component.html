@@ -1,4 +1,4 @@
-<form>
+<form class="my-5">
     <div class="form-row">
 
         <div class="form-group col-md-3">
@@ -15,9 +15,63 @@
             </select>
         </div>
 
-        <div class="form-group">
-            <button type="button" class="btn btn-success" (click)="addComune()">Salva e torna ad aggiunta
-                cliente</button>
-        </div>
+    </div>
+
+    <div class="form-group col-md-3 my-4">
+        <button type="button" class="btn btn-primary" (click)="addComune()">Add Municipality</button>
     </div>
 </form>
+
+<table class="table my-5">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Provincia</th>
+            <th>Modifica/Vedi Dettagli</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of comuni; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.nome}}</td>
+            <td>{{item.provincia.nome}} ({{item.provincia.sigla}})</td>
+            <td>
+                <div class="container d-flex">
+                    <button type="button" class="btn btn-danger btn-sm mx-1" (click)="deleteComune(item)"><i
+                            class="bi bi-trash"></i></button>
+                    <button type="button" class="btn btn-warning btn-sm mx-1" (click)="editComune(content, item)"><i
+                            class="bi bi-pencil-square"></i></button>
+                    <button type="button" class="btn btn-primary btn-sm mx-1"><i
+                            class="bi bi-person-circle"></i></button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Modifica Comune</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class=" my-3">
+            <div class="form-group">
+                <input type="text" [(ngModel)]="copyMunicipality.nome" class="form-control"
+                    placeholder="Nome Provincia">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="saveChanges()">Save Changes</button>
+    </div>
+</ng-template>
+
+<!--(click)="deleteComune(item)"
+
+(click)="editFattura(content, item)"
+
+(click)="invoiceDetails(item)"-->

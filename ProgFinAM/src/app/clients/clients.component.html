@@ -1,4 +1,4 @@
-<div class=" container d-flex justify-content-center col-2 my-5">
+<div class="container d-flex justify-content-center col-2 my-5">
     <button type="button" class="btn btn-dark form-control" (click)="addClient()">Add New Client</button>
 </div>
 <table class="table my-5">
@@ -44,36 +44,53 @@
     </div>
     <div class="modal-body">
         <div class=" my-3">
+
             <div class="form-group">
+                <label for="nome">Nome Contatto:</label>
                 <input type="text" [(ngModel)]="clientEdit.nomeContatto" class="form-control" placeholder="Nome...">
-            </div>
-            <div class="form-group">
-                <input type="text" [(ngModel)]="clientEdit.cognomeContatto" class="form-control"
-                    placeholder="Cognome...">
-            </div>
-            <div class="form-group">
-                <input type="text" [(ngModel)]="clientEdit.email" class="form-control" placeholder="Email...">
-            </div>
-            <div class="form-group">
-                <input type="number" [(ngModel)]="clientEdit.partitaIva" class="form-control"
-                    placeholder="Partita iva...">
             </div>
 
             <div class="form-group">
+                <label for="cognome">Cognome Contatto:</label>
+                <input type="text" [(ngModel)]="clientEdit.cognomeContatto" class="form-control"
+                    placeholder="Cognome...">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Contatto:</label>
+                <input type="text" [(ngModel)]="clientEdit.email" class="form-control" placeholder="Email...">
+            </div>
+
+            <div class="form-group">
+                <label for="piva">P. IVA:</label>
+                <input type="text" [(ngModel)]="clientEdit.partitaIva" class="form-control"
+                    placeholder="Partita IVA...">
+            </div>
+
+            <div class="form-group">
+                <label for="pec">PEC:</label>
                 <input type="text" [(ngModel)]="clientEdit.pec" class="form-control" placeholder="Pec...">
             </div>
+
             <div class="form-group">
+                <label for="telefonoContatto">Telefono Contatto:</label>
                 <input type="number" [(ngModel)]="clientEdit.telefonoContatto" class="form-control"
                     placeholder="Telefono contatto...">
             </div>
+
             <div class="form-group">
+                <label for="telefono">Telefono:</label>
                 <input type="text" [(ngModel)]="clientEdit.telefono" class="form-control" placeholder="Telefono...">
             </div>
+
             <div class="form-group">
+                <label for="emailContatto">Email Contatto:</label>
                 <input type="text" [(ngModel)]="clientEdit.emailContatto" class="form-control"
                     placeholder="Email Contatto...">
             </div>
+
             <div class="form-group">
+                <label for="ragioneSociale">Ragione Sociale:</label>
                 <input type="text" [(ngModel)]="clientEdit.ragioneSociale" class="form-control"
                     placeholder="Ragione sociale...">
             </div>

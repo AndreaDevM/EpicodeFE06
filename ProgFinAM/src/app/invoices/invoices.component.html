@@ -1,3 +1,6 @@
+<div class="container d-flex justify-content-center col-2 my-5">
+    <button type="button" class="btn btn-dark form-control" (click)="addInvoice()">Add New Invoice</button>
+</div>
 <table class="table my-5">
     <thead>
         <tr>
@@ -18,15 +21,64 @@
             <td>{{item.numero}}</td>
             <td>{{item.anno}}</td>
             <td>{{item.importo}}</td>
-            <td>{{item.stato.stato}}</td>
+            <td>{{item.stato.nome}}</td>
             <td>{{item.cliente.nomeContatto}} {{item.cliente.cognomeContatto}}</td>
             <td>
                 <div class="container d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger btn-sm mx-1"><i class="bi bi-trash"></i></button>
-                    <button type="button" class="btn btn-primary btn-sm mx-1"><i
-                            class="bi bi-person-circle"></i></button>
+                    <button type="button" class="btn btn-danger btn-sm mx-1" (click)="deleteInvoice(item)"><i
+                            class="bi bi-trash"></i></button>
+                    <button type="button" class="btn btn-warning btn-sm mx-1" (click)="editFattura(content, item)"><i
+                            class="bi bi-pencil-square"></i></button>
+                    <button type="button" class="btn btn-primary btn-sm mx-1"><i class="bi bi-person-circle"
+                            (click)="invoiceDetails(item)"></i></button>
                 </div>
             </td>
         </tr>
     </tbody>
 </table>
+
+<ng-template #content let-modal>
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Modifica Fattura</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class=" my-3">
+
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="text" [(ngModel)]="fatturaCopy.data" class="form-control" placeholder="Data">
+            </div>
+            <div class="form-group">
+                <label for="data">Nome:</label>
+                <input type="text" [(ngModel)]="fatturaCopy.numero" class="form-control" placeholder="Nome">
+            </div>
+            <div class="form-group">
+                <label for="data">Anno:</label>
+                <input type="text" [(ngModel)]="fatturaCopy.anno" class="form-control" placeholder="Anno">
+            </div>
+            <div class="form-group">
+                <label for="data">Importo:</label>
+                <input type="text" [(ngModel)]="fatturaCopy.importo" class="form-control" placeholder="Importo">
+            </div>
+            <div class="col-md-3 my-1">
+                <label for="tipo">Stato Fattura: </label>
+                <select class="p-2" name="tipo" [(ngModel)]="statoFattura" [ngModelOptions]="{standalone: true}">
+                    <option [ngValue]="item" *ngFor="let item of statoFattura">
+                        {{item.nome}}
+                    </option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="saveChanges()">Save Changes</button>
+    </div>
+
+</ng-template>

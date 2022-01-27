@@ -35,6 +35,11 @@
     </div>
 
     <div class="col-md-3 my-1">
+        <label for="fatturatoAnnuale">Fatturato Annuale:</label>
+        <input type="number" [(ngModel)]="client.fatturatoAnnuale" class="form-control" placeholder="Fatturato Annuale">
+    </div>
+
+    <div class="col-md-3 my-1">
         <p></p>
         <label for="FormGroupExampleInput2">Tipo Cliente</label>
         <select [(ngModel)]="client.tipoCliente">
@@ -59,8 +64,6 @@
             Indirizzo Sede Legale:
         </h2>
     </div>
-
-
 
     <div class="container col-md-4 my-1">
         <label for="Via">Via</label>

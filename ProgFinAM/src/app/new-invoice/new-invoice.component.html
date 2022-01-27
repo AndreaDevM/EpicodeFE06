@@ -1,0 +1,40 @@
+<div class="form-row d-flex my-5">
+
+    <div class="col-md-3 my-1">
+        <label for="numero">Numero:</label>
+        <input type="number" [(ngModel)]="fattura.numero" class="form-control" placeholder="Numero">
+    </div>
+
+    <div class="col-md-3 my-1">
+        <label for="Pec">Anno:</label>
+        <input type="number" [(ngModel)]="fattura.anno" class="form-control" placeholder="Anno">
+    </div>
+
+    <div class="col-md-3 my-1">
+        <label for="Pec">Importo:</label>
+        <input type="number" [(ngModel)]="fattura.importo" class="form-control" placeholder="Importo">
+    </div>
+
+    <div class="col-md-3 my-1">
+        <label for="tipo">Cliente: </label>
+        <select class="p-2" name="tipo" [(ngModel)]="fattura.cliente" [ngModelOptions]="{standalone: true}">
+            <option [ngValue]="item" *ngFor="let item of clients">
+                {{item.nomeContatto}} {{item.cognomeContatto}}
+            </option>
+        </select>
+    </div>
+
+    <div class="col-md-3 my-1">
+        <label for="tipo">Cliente: </label>
+        <select class="p-2" name="tipo" [(ngModel)]="fattura.stato" [ngModelOptions]="{standalone: true}">
+            <option [ngValue]="item" *ngFor="let item of statoFattura">
+                {{item.nome}}
+            </option>
+        </select>
+    </div>
+
+</div>
+
+<div class="container d-flex justify-content-center col-3">
+    <button type="button" class="btn btn-dark form-control" (click)="addFattura()">Add Client</button>
+</div>

@@ -18,7 +18,7 @@ export class Client {
     indirizzoSedeLegale!: IndirizzoSedeLegale;
     dataInserimento!: string;
     dataUltimoContatto!: string;
-    fatturatoAnnuale?: string;
+    fatturatoAnnuale?: number;
 
     constructor() {
         this.indirizzoSedeLegale = new IndirizzoSedeLegale;

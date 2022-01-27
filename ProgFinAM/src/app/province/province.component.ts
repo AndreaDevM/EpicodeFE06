@@ -39,7 +39,7 @@ export class ProvinceComponent implements OnInit {
   }
 
   saveChanges() {
-    this.provinceService.saveClient(this.copyProvincia).subscribe(res => console.log(res))
+    this.provinceService.saveProvincia(this.copyProvincia).subscribe(res => console.log(res))
     this.modalService.dismissAll();
   }
 

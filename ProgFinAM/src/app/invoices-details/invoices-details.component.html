@@ -1,0 +1,22 @@
+<div class="card text-white bg-dark my-5">
+
+    <div class="card-header">
+        <h1 class="card-title text-warning">
+            Cliente:
+            <span class="text-white"> {{fattura.cliente.cognomeContatto}}
+                {{fattura.cliente.nomeContatto}}
+            </span>
+        </h1>
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title text-warning"><span class="text-white">Anno:</span>
+            {{fattura.anno}}</h5>
+        <h5 class="card-title text-warning"><span class="text-white">Numero:</span>
+            {{fattura.numero}}</h5>
+        <h5 class="card-title text-warning"><span class="text-white">Data:</span> {{fattura.data}}</h5>
+        <h5 class="card-title text-warning"><span class="text-white">Importo:</span> {{fattura.importo}} €</h5>
+        <h5 class="card-title text-warning"><span class="text-white">Stato:</span> {{fattura.stato.nome}}</h5>
+    </div>
+
+</div>

@@ -19,7 +19,7 @@ export class ComuniService {
                         }
 
   getAllComuni() {
-    return this.http.get<Comuni>(environment.urlEpicode+'api/comuni?page=0&size=20&sort=id,ASC')
+    return this.http.get<Comuni>(environment.urlEpicode+'api/comuni?page=0&size=20&sort=id,DESC')
   }
 
   getComuneById(id: number) {
@@ -28,6 +28,14 @@ export class ComuniService {
 
   addComune(item: Comune) {
     return this.http.post<Comune>(environment.urlEpicode+'api/comuni/', item)
+  }
+
+  saveComune(item: Comune) {
+    return this.http.put<Comune>(environment.urlEpicode+'api/comuni/'+ item.id, item)
+  }
+
+  deleteComune(id: number | undefined) {
+    return this.http.delete(environment.urlEpicode+'api/comuni/' + id);
   }
 
 }
