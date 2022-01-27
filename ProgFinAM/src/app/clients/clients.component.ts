@@ -39,7 +39,6 @@ export class ClientsComponent implements OnInit {
   saveChanges() {
     this.modalService.dismissAll();
     this.clientService.saveClient(this.clientEdit).subscribe(res => console.log(res))
-    console.log(this.clientEdit)
   }
 
   deleteClient(item: Client) {
