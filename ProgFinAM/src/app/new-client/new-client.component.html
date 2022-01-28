@@ -31,7 +31,7 @@
 
     <div class="col-md-4 my-1">
         <label for="P. IVA"><b>P. IVA:</b></label>
-        <input type="text" [(ngModel)]="client.partitaIva" class="form-control" placeholder="P. IVA">
+        <input type="number" [(ngModel)]="client.partitaIva" class="form-control" placeholder="P. IVA">
     </div>
 
     <div class="col-md-3 my-1">
@@ -97,9 +97,13 @@
     </div>
 
     <div class="container col-md-4 my-1">
+        <p></p>
         <label for="provinciaNome"><b>Provincia:</b></label>
-        <input type="text" [(ngModel)]="client.indirizzoSedeLegale.comune.provincia.nome" class="form-control"
-            placeholder="Provincia">
+        <select [(ngModel)]="client.indirizzoSedeLegale.comune.provincia">
+            <option [ngValue]="item" *ngFor="let item of comuneArr">
+                {{item.nome}}
+            </option>
+        </select>
     </div>
 
     <div class=" col-12 my-3">
@@ -141,9 +145,13 @@
     </div>
 
     <div class="container col-md-4 my-1">
+        <p></p>
         <label for="provinciaNome"><b>Provincia:</b></label>
-        <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.nome" class="form-control"
-            placeholder="Provincia">
+        <select [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia">
+            <option [ngValue]="item" *ngFor="let item of comuneArr">
+                {{item.nome}}
+            </option>
+        </select>
     </div>
 
     <div class="container d-flex justify-content-center col-3 bg mt-5">

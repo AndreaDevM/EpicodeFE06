@@ -4,7 +4,8 @@
         <h1 class="card-title text-color1">
             {{fattura.cliente.cognomeContatto}}
             {{fattura.cliente.nomeContatto}}
-
+            <button type="button" class="btn button-bg" (click)="clientDetails(fattura.cliente)"><i
+                    class="bi bi-eye-fill"></i></button>
         </h1>
     </div>
 

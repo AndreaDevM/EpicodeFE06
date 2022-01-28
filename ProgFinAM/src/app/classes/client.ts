@@ -5,7 +5,7 @@ export class Client {
 
     id?: number;
     ragioneSociale!: string;
-    partitaIva!: string;
+    partitaIva!: number;
     tipoCliente!: string;
     email!: string;
     pec!: string;
