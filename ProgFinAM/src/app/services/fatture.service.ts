@@ -22,7 +22,7 @@ export class FattureService {
                         }
 
   getAllFatture() {
-    return this.http.get<Invoices>(environment.urlEpicode+'api/fatture?page=0&size=20&sort=id,ASC')
+    return this.http.get<Invoices>(environment.urlEpicode+'api/fatture?page=0&size=20&sort=id,DESC')
   }
 
   getFattureById(id: number) {

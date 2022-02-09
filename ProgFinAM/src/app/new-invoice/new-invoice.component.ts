@@ -27,7 +27,7 @@ export class NewInvoiceComponent implements OnInit {
   }
 
   addFattura() {
-    console.log(this.fattura);
+    this.fattureService.addFattura(this.fattura).subscribe(data => console.log(data))
   }
 
 }
