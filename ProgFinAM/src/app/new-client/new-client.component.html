@@ -101,7 +101,7 @@
         <label for="provinciaNome"><b>Provincia:</b></label>
         <select [(ngModel)]="client.indirizzoSedeLegale.comune.provincia">
             <option [ngValue]="item" *ngFor="let item of comuneArr">
-                {{item.nome}}
+                {{item.provincia.nome}}
             </option>
         </select>
     </div>
@@ -149,7 +149,7 @@
         <label for="provinciaNome"><b>Provincia:</b></label>
         <select [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia">
             <option [ngValue]="item" *ngFor="let item of comuneArr">
-                {{item.nome}}
+                {{item..provincia.nome}}
             </option>
         </select>
     </div>

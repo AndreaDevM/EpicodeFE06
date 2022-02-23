@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class HttpinterceptorInterceptor implements HttpInterceptor {
 
   tenantID = 'fe_0621';
-  bearerToken = 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NDQxODU5NiwiZXhwIjoxNjQ1MjgyNTk2fQ.KZyWz6kvXcefsy64hOKEEPBD1HBQT7w4Wvisu7tWMhWw8iqJrFuer38W44_XXsBJ1rO3jjTUP9p4ygSWRuGqgw';
+  bearerToken = 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NTQ3OTEyMywiZXhwIjoxNjQ2MzQzMTIzfQ.hxZRlYE0xYHn4MvK36BllS52FwG8l2kZ0dDD1--h9nabeJpzuekx9qqIahrx8Gi6gdK0KXpaelb35H7mawy24g';
 
   constructor() {}
 

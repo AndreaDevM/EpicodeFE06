@@ -20,7 +20,6 @@ export class ClientsService {
                         }
 
     getAllClients() {
-      //return this.http.get(this.urlProva+'api/clienti?page=0&size=20&sort=id,ASC', {headers: this.headers})
       return this.http.get<Clients>(environment.urlEpicode+'api/clienti?page=0&size=20&sort=id,DESC')
     }
 

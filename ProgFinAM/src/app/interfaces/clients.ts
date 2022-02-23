@@ -1,7 +1,7 @@
 import { Client } from "../classes/client";
 
 export interface Clients {
-    content: Array<Client>
+    content: Array<Client>;
     empty: boolean;
     first: boolean;
     last: boolean;
